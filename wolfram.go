@@ -1,5 +1,9 @@
 package wolfram
 
+import (
+    "xml"
+)
+
 
 type Context struct {
 	xml.Header

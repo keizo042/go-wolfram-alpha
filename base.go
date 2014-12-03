@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-func NewContext(id string) wolfram.Context {
+func NewContext(id string) Context {
     var ctx Context
     ctx.appid = id
 
