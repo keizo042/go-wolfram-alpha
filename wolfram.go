@@ -1,13 +1,9 @@
 package wolfram
 
-import (
-	"encoding/xml"
-	"fmt"
-	"net/http"
-)
 
 type Context struct {
 	xml.Header
+	appid string
 	Query QueryResult
 }
 
@@ -102,39 +98,3 @@ type Source struct {
 	Text string `xml:"text,attr"`
 }
 
-func NewContext(appid string) (wolfram.Context, error) {
-
-}
-
-func (c Context) Reader() error {
-
-    var data string
-    xml.Unmarshal(data,&c)
-
-}
-
-func (c Context) connect () {
-
-    if err != nil {
-    }
-}
-
-func (c Context) ShowContext () error {
-
-}
-
-func (c Context) Get(data string) (string, error) {
-
-}
-
-func (q QueryResult) IsSccuess() (bool, error) {
-
-}
-
-func (p Pod) ShowSubPod() (string, error) {
-
-}
-
-func request(appid string) {
-    var url string ="http://api.wolframalpha.com/v2/query?appid=" + appid + "&input=hello&format=image,plaintext"
-}
