@@ -3,6 +3,7 @@ package wolfram
 import (
 	"encoding/xml"
 	"fmt"
+	"io/ioutil"
 	"net/http"
 )
 
@@ -39,10 +40,27 @@ func (c Context) Get(data string) (string, error) {
 }
 
 func (c *Context) request() {
-    var url string ="http://api.wolframalpha.com/v2/query?appid=" + c.appid + "&input=hello&format=image,plaintext"
+    var url string ="http://api.wolframalpha.com/v2/query?appid=" + c.appid + "&input=" +"hello" +"&format=" +"image,plaintext"
+    res, err := http.Get(url)
+    if err != nil {
+        fmt.Errorf(err)
+        return
+    }
+   b, err  := ioutil.ReadAll(res.Body)
+   if err != nil {
+       fmt.Errorf(err)
+       return
+   }
+   var query QueryResult
+   err = xml.Unmarshal(b,&query)
+   if err != nil {
+       fmt.Errorf(err)
+       return
+   }
+   c.Query = query
 }
 
-func (q QueryResult) IsSccuess() (bool) {
+func (q QueryResult) IsSccuess() bool {
     return q.Success
 
 }
