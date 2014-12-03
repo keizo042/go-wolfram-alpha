@@ -1,7 +1,7 @@
 package wolfram
 
 import (
-    "xml"
+    "encoding/xml"
 )
 
 
