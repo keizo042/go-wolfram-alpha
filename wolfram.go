@@ -51,21 +51,22 @@ type QueryResult struct {
 }
 
 type Pod struct {
-	XMLName xml.Name `xml:pod`
+	XMLName xml.Name `xml:"pod"`
 	//tag
-	Title      string `xml:title,attr`
-	Scanner    string `xml:scanner,attr`
-	Id         string  `xml:id,attr`
-	Position   string `xml:position,attr`
-	Err        string `xml:error,attr`
-	Numsubpods int32  `xml:numsubpods,attr`
+	Title      string `xml:"title,attr"`
+	Scanner    string `xml:"scanner,attr"`
+	Id         string  `xml:"id,attr"`
+	Position   string `xml:"position,attr"`
+	Err        string `xml:"error,attr"`
+	Numsubpods int32  `xml:"numsubpods,attr"`
 
 	Subpods []SubPod `xml:"subod"`
 }
 
 type States struct {
 	XMLName xml.Name `xml:"states"`
-	Stat    []State  `xml:"states"`
+	Count int32 `xml:"count"`
+	State    []State  `xml:"state"`
 }
 
 type State struct {
