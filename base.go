@@ -17,10 +17,10 @@ func New(id string) Client {
 
 }
 
-func (c *Client) Query(data string)  error {
+func (c *Client) Get(data string)  error {
     //export function
     // atodeyaru
-    err := request(data)
+    err := c.request(data)
     return err
 }
 
@@ -65,7 +65,6 @@ func (c *Client) IsSuccessed() bool {
 
 func (c *Client) ShowClient() error {
     //maybe delete
-    fmt.P
 
     return nil
 }
