@@ -55,7 +55,7 @@ type Pod struct {
 	//tag
 	Title      string `xml:title,attr`
 	Scanner    string `xml:scanner,attr`
-	Id         int32  `xml:id,attr`
+	Id         string  `xml:id,attr`
 	Position   string `xml:position,attr`
 	Err        string `xml:error,attr`
 	Numsubpods int32  `xml:numsubpods,attr`
