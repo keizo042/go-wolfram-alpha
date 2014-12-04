@@ -28,6 +28,7 @@ func (c Context) connect() {
 
 func (c Context) ShowContext() error {
 
+    return nil
 }
 
 func (c Context) Get(data string) (string, error) {
