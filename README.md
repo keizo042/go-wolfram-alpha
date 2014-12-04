@@ -12,5 +12,10 @@ Install
 
 go get github.com/KeizoBookman/go-wolfram-alpha
 
+SAMPLE
+====
+
+
 LICENSE
+====
 2 clause BSD

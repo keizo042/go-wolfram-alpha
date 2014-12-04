@@ -17,34 +17,14 @@ func New(id string) Client {
 
 }
 
-func (c *Client) Reader() error {
-    // it is fulled to io.Reader & io.Writer
-    // i don have some idea
-
-	var data []byte
-	xml.Unmarshal(data, &c)
-
-	return nil
-}
-
-func (c *Client) connect() {
-    //some function to request?
-}
-
-func (c *Client) ShowClient() error {
-    //maybe delete
-
-    return nil
-}
-
-func (c *Client) Get(data string) (string, error) {
+func (c *Client) Query(data string)  error {
     //export function
     // atodeyaru
-
-	return "", nil
+    err := request(data)
+    return err
 }
 
-func (c *Client) request(input string) {
+func (c *Client) request(input string) error{
     // internal process to request wolfram-alpha.com engine.
     // 
     // ***future implementation***
@@ -59,32 +39,33 @@ func (c *Client) request(input string) {
 	res, err := http.Get(url)
 	if err != nil {
 		fmt.Errorf("http Get failed %v", err)
-		return
+		return err
 	}
 
 	b, err := ioutil.ReadAll(res.Body)
 	if err != nil {
 		fmt.Errorf("can not read resoponce body %v", err)
-		return
+		return err
 	}
 
 	err = xml.Unmarshal(b, &query)
 	if err != nil {
 		fmt.Errorf("unmarshal error:%v", err)
-		return
+		return err
 	}
 	c.Query = query
+
+	return nil
 }
 
-func (c *Client) ConnectionSucess() bool {
+func (c *Client) IsSuccessed() bool {
     //check to query-result server-side states
 	return  c.Query.success
 }
 
-func (p Pod) PrintlnSubPod() error {
-	for _, a := range p.Subpods {
-		fmt.Println(a.Title)
-	}
+func (c *Client) ShowClient() error {
+    //maybe delete
+    fmt.P
 
-	return nil
+    return nil
 }
