@@ -6,7 +6,6 @@ import (
 
 
 type Context struct {
-	xml.Header
 	appid string
 	Query QueryResult
 }
@@ -22,7 +21,7 @@ type QueryResult struct {
 	Timedoutpods  string `xml:"timedoutpods,attr"`
 	Timing        int32  `xml:"timing,attr"`
 	Parsetiming   int32  `xml:"parsetiming,attr"`
-	Parsetimedout bool   `xml:"parsetimedout"`
+	Parsetimedout bool   `xml:"parsetimedout,attr"`
 	Recalculate   string `xml:"recalculate,attr"`
 	Id            string `xml:"id,attr"`
 	Host          string `xml:"host,attr"`
@@ -30,8 +29,9 @@ type QueryResult struct {
 	Related       string `xml:"related,attr"`
 	Version       string `xml:"version,attr"`
 
-	Pods    []Pod
-	Assumpt []Assumptions
+        Pods    []Pod `xml:"pod"`
+        Assumpt []Assumptions `xml:"assumptions"`
+        Sources Sources `xml:"sources"`
 }
 
 type Pod struct {
@@ -44,7 +44,7 @@ type Pod struct {
 	Err        string `xml:error,attr`
 	Numsubpods int32  `xml:numsubpods,attr`
 
-	Subpods []SubPod
+        Subpods []SubPod `xml:"subod"`
 }
 
 type States struct {
@@ -74,26 +74,27 @@ type Img struct {
 
 type Assumptions struct {
 	count int32 `xml:"count,attr"`
-	Assum []Assumption
+        Assum []Assumption `xml:"assumption"`
 }
 
 type Assumption struct {
 	Type   string `xml:"type,attr"`
 	Word   string `xml:"word,attr"`
 	Template string `xml:"template,attr"`
-	Count  int32  `xml:count,attr"`
-	Values []Value
+	Count  int32  `xml:"count,attr"`
+        Values []Value `xml:"value"`
 }
 
 type Value struct {
-	XMLName xml.Name `xml:"name"`
+	XMLName xml.Name `xml:"value"`
 	Name  string `xml:"name,attr"`
 	desc  string `xml:"desc,attr"`
 	input string `xml:"input,attr"`
 }
 
 type Sources struct {
-    XMLsource []Source
+    XMLsource []Source `xml:"source"`
+    Count int32 `xml:"count,attr"`
 }
 
 type Source struct {
