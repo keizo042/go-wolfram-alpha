@@ -18,6 +18,10 @@ import (
 	"encoding/xml"
 )
 
+//
+//  xml structs
+//
+
 type Client struct {
 	appid string
 	Query QueryResult
@@ -123,3 +127,15 @@ type Source struct {
 	Url     string   `xml:"url,attr"`
 	Text    string   `xml:"text,attr"`
 }
+
+//
+// flag struct
+//
+
+type flag struct {
+    image bool
+    plaintext bool
+    html bool
+    sound bool
+}
+

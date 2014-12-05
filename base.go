@@ -7,7 +7,7 @@ import (
 	"net/http"
 )
 
-func New(id string) Client {
+func New(id string) *Client {
     // Make New Client Structure
     //
 	var ctx Client
@@ -17,11 +17,11 @@ func New(id string) Client {
 
 }
 
-func (c *Client) Get(data string)  error {
+func (c *Client) Get(data string)  (*QueryResult,error) {
     //export function
     // atodeyaru
     err := c.request(data)
-    return err
+    return c.Query,err
 }
 
 func (c *Client) request(input string) error{
@@ -32,6 +32,7 @@ func (c *Client) request(input string) error{
     // we can choice some way
     // args -> const variable like os.O_XXX
     //      -> make strucure filed {image bool,plaintext bool,mathematica_input bool}
+
 	var url string = "http://api.wolframalpha.com/v2/query?appid=" + c.appid + "&input=" + input + "&format=" + "image,plaintext"
 	var query QueryResult
 
@@ -67,4 +68,8 @@ func (c *Client) ShowClient() error {
     //maybe delete
 
     return nil
+}
+
+func flagCheck(f flag) string {
+
 }
