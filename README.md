@@ -7,7 +7,6 @@ abstract
 api for wolfram alpha & will be implement for mathematica.
 
 
-
 Install
 ====
 
@@ -30,7 +29,7 @@ call wolfram alpha api in plaintext, image
 
 will be
 
-user can switch plaintext/image/mathematica input and other strucuter that wolfram Research provides.
+user can switch plaintext/image/mathematica input and other strucuture that wolfram Research provides.
 
 LICENSE
 ====

@@ -12,7 +12,7 @@ package wolfram
 // ctx := wolfram.New(<your-app-id>)
 // ctx.Get()
 // fmt.Println(ctx.Query)
-// 
+//
 
 import (
 	"encoding/xml"
@@ -49,9 +49,12 @@ type QueryResult struct {
 	Related       string   `xml:"related,attr"`
 	Version       string   `xml:"version,attr"`
 
-	Pods    []Pod         `xml:"pod"`
-	Assumpt []Assumptions `xml:"assumptions"`
-	Sources Sources       `xml:"sources"`
+	Pods        []Pod         `xml:"pod"`
+	Assumpt     []Assumptions `xml:"assumptions"`
+	Sources     Sources       `xml:"sources"`
+	ExamplePage ExamplePage   `xml:"examplepage"`
+	Scripts     string        `xml:"scripts"`
+	Css         string        `xml;"css"`
 }
 
 type Pod struct {
@@ -59,7 +62,7 @@ type Pod struct {
 	//tag
 	Title      string `xml:"title,attr"`
 	Scanner    string `xml:"scanner,attr"`
-	Id         string  `xml:"id,attr"`
+	Id         string `xml:"id,attr"`
 	Position   string `xml:"position,attr"`
 	Err        string `xml:"error,attr"`
 	Numsubpods int32  `xml:"numsubpods,attr"`
@@ -69,8 +72,8 @@ type Pod struct {
 
 type States struct {
 	XMLName xml.Name `xml:"states"`
-	Count int32 `xml:"count"`
-	State    []State  `xml:"state"`
+	Count   int32    `xml:"count"`
+	State   []State  `xml:"state"`
 }
 
 type State struct {
@@ -128,14 +131,18 @@ type Source struct {
 	Text    string   `xml:"text,attr"`
 }
 
+type ExamplePage struct {
+	Category string `xml:"category,attr"`
+	Url      string `xml:"url,attr"`
+}
+
 //
 // flag struct
 //
 
 type flag struct {
-    image bool
-    plaintext bool
-    html bool
-    sound bool
+	image     bool
+	plaintext bool
+	html      bool
+	sound     bool
 }
-

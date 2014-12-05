@@ -14,7 +14,6 @@ func main() {
 		return
 	}
 	fmt.Println(q)
-	fmt.Println("====================")
 
 	// example access pod
 	for _, pod := range q.Pods {
