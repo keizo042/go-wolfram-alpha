@@ -13,7 +13,7 @@ func New(id string) *Client {
 	var ctx Client
 	ctx.appid = id
 
-	return ctx
+	return &ctx
 
 }
 
@@ -21,7 +21,7 @@ func (c *Client) Get(data string)  (*QueryResult,error) {
     //export function
     // atodeyaru
     err := c.request(data)
-    return c.Query,err
+    return &c.Query,err
 }
 
 func (c *Client) request(input string) error{
@@ -71,5 +71,7 @@ func (c *Client) ShowClient() error {
 }
 
 func flagCheck(f flag) string {
+
+    return ""
 
 }
