@@ -1,5 +1,9 @@
 package wolfram
 
+import (
+    "github.com/KeizoBookman/go-wolfram-alpha"
+)
+
 
 func (q *QueryResult) mapPod() {
 
