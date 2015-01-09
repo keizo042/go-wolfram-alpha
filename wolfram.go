@@ -140,7 +140,7 @@ type ExamplePage struct {
 // flag 
 //
 const (
-	A_PLAIN 
+	A_PLAIN  = itoa +1
 	A_IMAGE
 	A_SOUND
 	A_HTML
