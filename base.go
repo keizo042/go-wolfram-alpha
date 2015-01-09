@@ -71,16 +71,5 @@ func (c *Client) ShowClient() error {
 }
 
 func flagCheck(f flag) string {
-    s := ""
-    if f.html {
-    }
-    if f.image {
-    }
-    if f.plaintext {
-    }
-    if f.sound {
-    }
-
-    return s
 
 }

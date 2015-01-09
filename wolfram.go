@@ -137,12 +137,21 @@ type ExamplePage struct {
 }
 
 //
-// flag struct
+// flag 
 //
-
-type flag struct {
-	image     bool
-	plaintext bool
-	html      bool
-	sound     bool
-}
+const (
+	A_PLAIN 
+	A_IMAGE
+	A_SOUND
+	A_HTML
+	A_PI
+	A_PS
+	A_PH
+	A_IS
+	A_IH
+	A_PIS
+	A_PSH
+	A_ISH
+	A_PIH
+	A_ALL
+)
