@@ -33,7 +33,7 @@ func (c *Client) request(input string) error{
     // args -> const variable like os.O_XXX
     //      -> make strucure filed {image bool,plaintext bool,mathematica_input bool}
 
-	var url string = "http://api.wolframalpha.com/v2/query?appid=" + c.appid + "&input=" + input + "&format=" + flagCheck(flag{true,true,true,true})
+	var url string = "http://api.wolframalpha.com/v2/query?appid=" + c.appid + "&input=" + input + "&format=" + "plaintext,image" // flagCheck()
 	var query QueryResult
 
     //
@@ -69,7 +69,9 @@ func (c *Client) ShowClient() error {
 
     return nil
 }
-
+/*
 func flagCheck(f flag) string {
 
+    return ""
 }
+*/
