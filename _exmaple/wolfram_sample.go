@@ -8,6 +8,8 @@ import (
 
 func main() {
     c: = mathematica.New()
-    c.Fetch("1 + 1")
-    
+    q,err :=c.Fetch("1 +1")
+    if err != nil {
+	return -1
+    }
 }
