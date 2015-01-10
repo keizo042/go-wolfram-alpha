@@ -16,21 +16,21 @@ SAMPLE
 ====
 under _exmaple
 
-On your terminal.
+On your terminal.  
 
-go build ./_example/sample.go
-./example/sample
+go build ./_example/sample.go  
+./example/sample  
 
-and other sample
+and other sample  
 
 PLAN
 ====
-implementation
+implementation  
 
-call wolfram alpha api in plaintext, image
-
-user can switch plaintext/image/mathematica(minput) input and other structure that wolfram Research provides.
+call wolfram alpha api in plaintext, image  
+  
+user can switch plaintext/image/mathematica(minput) input and other structure that wolfram Research provides.  
 
 LICENSE
 ====
-2 clause BSD
+2 clause BSD  
