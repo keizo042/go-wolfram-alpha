@@ -137,21 +137,52 @@ type ExamplePage struct {
 }
 
 //
-// flag 
+// flag
 //
 const (
-	A_PLAIN  = iota +1
-	A_IMAGE
-	A_SOUND
-	A_HTML
-	A_PI
-	A_PS
-	A_PH
-	A_IS
-	A_IH
-	A_PIS
-	A_PSH
-	A_ISH
-	A_PIH
-	A_ALL
+	//prime number
+	A_PLAIN  int = 2
+	A_IMAGE  int = 3
+	A_SOUND  int = 5
+	A_HTML   int = 7
+	A_CELL   int = 11
+	A_MINPUT int = 13
+
+	A_PI int = A_PLAIN * A_IMAGE
+	A_PS int = A_PLAIN * A_SOUND
+	A_PH int = A_PLAIN * A_HTML
+	A_PC int = A_PLAIN * A_CELL
+	A_PM int = A_PLAIN * A_MINPUT
+
+	A_IS int = A_IMAGE * A_SOUND
+	A_IH int = A_IMAGE * A_SOUND
+	A_IC int = A_IMAGE * A_SOUND
+	A_IM int = A_IMAGE * A_SOUND
+
+	A_SH int = A_SOUND * A_HTML
+	A_SC int = A_SOUND * A_CELL
+	A_SM int = A_SOUND * A_MINPUT
+
+	A_HC int = A_HTML * A_CELL
+	A_HM int = A_HTML * A_MINPUT
+
+	A_PIS int = A_PLAIN * A_IMAGE * A_SOUND
+	A_PIH int = A_PLAIN * A_IMAGE * A_HTML
+	A_PIC int = A_PLAIN * A_IMAGE * A_CELL
+	A_PIM int = A_PLAIN * A_IMAGE * A_MINPUT
+	A_PSH int = A_PLAIN * A_SOUND * A_HTML
+	A_PSC int = A_PLAIN * A_SOUND * A_CELL
+	A_PSM int = A_PLAIN * A_SOUND * A_MINPUT
+	A_PHC int = A_PLAIN * A_HTML * A_CELL
+	A_PHM int = A_PLAIN * A_HTML * A_MINPUT
+	A_ISH int = A_IMAGE * A_SOUND * A_HTML
+	A_ISC int = A_IMAGE * A_SOUND * A_CELL
+	A_ISM int = A_IMAGE * A_SOUND *  A_MINPUT
+	A_IHC int = A_IMAGE * A_HTML * A_CELL
+	A_IHM int = A_IMAGE * A_HTML * A_MINPUT
+	A_ICM int = A_IMAGE * A_CELL * A_MINPUT
+	A_SHC int = A_SOUND * A_HTML * A_CELL
+	A_SHM int = A_SOUND * A_HTML * A_MINPUT
+	A_SCM int = A_SOUND * A_CELL * A_MINPUT
+	A_ALL int = A_PLAIN * A_IMAGE * A_SOUND * A_HTML * A_CELL * A_MINPUT
 )

@@ -8,7 +8,7 @@ import (
 func main() {
 	id := ""
 	c := wolfram.New(id)
-	q,err := c.Get("oosaka")
+	q,err := c.Get("oosaka", wolfram.A_PLAIN)
 	if err != nil {
 		fmt.Errorf("%v", err)
 		return
