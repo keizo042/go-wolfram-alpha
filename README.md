@@ -4,7 +4,7 @@ go-wolfram-alpha
 abstract
 ====
 
-api for wolfram alpha & will be implement for mathematica.
+api for wolfram alpha  & will be implement qualified for mathematica.
 
 
 Install

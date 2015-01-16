@@ -1,3 +1,0 @@
-package mathematica_test
-
-

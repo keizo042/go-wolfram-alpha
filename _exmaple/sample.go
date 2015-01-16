@@ -1,4 +1,14 @@
 package main
+/*
+this sample is simple, minimam, shortest.
+when you try this sample, you get Wolfram Developer id &
+declear i variable.
+like this.
+id := YOUR_WOLFRAM_ID.
+
+That way, this sample take correct work.
+
+*/
 
 import (
 	"fmt"

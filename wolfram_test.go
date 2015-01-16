@@ -6,7 +6,7 @@ import (
 )
 
 
-func TestStrucuret(t *testing.T) {
+func TestStruct(t *testing.T) {
 
 }
 
