@@ -1,11 +1,11 @@
 go-wolfram-alpha
 ====
 
-abstract
+Abstract
 ====
 
-api for wolfram alpha  & will be implement qualified for mathematica.
-
+Api for wolfram alpha  & will be implement qualified for mathematica.
+You get raw, simple structure binding for wolfram alpha QueryResult
 
 Install
 ====
@@ -25,11 +25,10 @@ and other sample
 
 PLAN
 ====
-implementation  
 
-call wolfram alpha api in plaintext, image  
+implementation for all wolfram alpha api 
   
-user can switch plaintext/image/mathematica(minput) input and other structure that wolfram Research provides.  
+users can switch plaintext/image/mathematica(minput) input and other structure that wolfram Research provides.  
 
 LICENSE
 ====
